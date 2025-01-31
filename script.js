@@ -16,8 +16,8 @@ function calculateTax(income, slabs) {
             break;
         }
     }
-
-    return "₹ " + tax;
+    var  finalTax =parseFloat(tax) + parseFloat(tax*0.04);
+    return "₹ " + finalTax ;
 }
 
 // Function for old tax calculation
@@ -29,12 +29,16 @@ function incomeOld() {
         { limit: 1000000, rate: 0.20 },
         { limit: Infinity, rate: 0.30 }
     ];
-    document.getElementById("resultOld").innerHTML = "Your Income old Tax: " + calculateTax(income, slabs);
+    if(income>500000)        
+        document.getElementById("resultOld").innerHTML = "Your Income old Tax: " + calculateTax(income, slabs);
+        else
+        document.getElementById("resultOld").innerHTML = "Your Income old Tax: " + calculateTax(income-income+1, slabs);
 }
 
 // Function for new tax calculation
 function incomeNew() {
     let income = parseFloat(document.getElementById("taxIncome").value);
+   
     let slabs = [
         { limit: 300000, rate: 0 },
         { limit: 700000, rate: 0.05 },
@@ -43,7 +47,11 @@ function incomeNew() {
         { limit: 1500000, rate: 0.20 },
         { limit: Infinity, rate: 0.30 }
     ];
+   
+    if(income>700000)    
     document.getElementById("resultNew").innerHTML = "Your Income new Tax: " + calculateTax(income, slabs);
+    else
+    document.getElementById("resultNew").innerHTML = "Your Income new Tax: " + calculateTax(income-income+1, slabs);
 }
 
 document.addEventListener('contextmenu', event => event.preventDefault());
