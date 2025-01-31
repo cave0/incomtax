@@ -45,3 +45,5 @@ function incomeNew() {
     ];
     document.getElementById("resultNew").innerHTML = "Your Income new Tax: " + calculateTax(income, slabs);
 }
+
+document.addEventListener('contextmenu', event => event.preventDefault());
