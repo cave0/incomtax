@@ -16,13 +16,13 @@ function calculateTax(income, slabs) {
             break;
         }
     }
-    var  finalTax =parseFloat(tax) + parseFloat(tax*0.04);
-    return "₹ " + finalTax ;
+    var  finalTax = Math.round(parseFloat(tax) + parseFloat(tax*0.04));
+    return "₹ " +  finalTax ;
 }
 
 // Function for old tax calculation
 function incomeOld() {
-    let income = parseFloat(document.getElementById("taxIncome").value);
+    let income = parseFloat(document.getElementById("oldTaxIncome").value);
     let slabs = [
         { limit: 250000, rate: 0 },
         { limit: 500000, rate: 0.05 },
@@ -37,7 +37,7 @@ function incomeOld() {
 
 // Function for new tax calculation
 function incomeNew() {
-    let income = parseFloat(document.getElementById("taxIncome").value);
+    let income = parseFloat(document.getElementById("newTaxIncome").value);
    
     let slabs = [
         { limit: 300000, rate: 0 },
