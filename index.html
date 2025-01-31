@@ -7,6 +7,17 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
     <title>Document</title>
   </head>
+  <style>
+    .button1{
+   
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+    border-radius: 4px;
+    text-align: center;
+}
+
+  </style>
   <body>
     <div class="modal modal-sheet position-static d-block bg-body-secondary p-4 py-md-5" tabindex="-1" role="dialog" id="modalSignin">
       <div class="modal-dialog" role="document">
@@ -14,30 +25,36 @@
            <div class="modal-body p- pt-0">
             <div>
               <div class="form-floating mb-3 center p-3"> 
-                <h3> INCOME TAX CALCULATOR AY 2025-26 </h3>               
-                <h3> N V L NARASIMHAM SA ENGLISH </h3>
-                <h3> ZPHS P L PURAM</h3>
-                <h3>mail: nvl096@gmail.com</h3>
+                <h4 class="text-center"> INCOME TAX CALCULATOR AY 2025-26 </h4>               
+                <h4 class="text-center"> N V L NARASIMHAM SA ENGLISH </h4>
+                <h4 class="text-center"> ZPHS P L PURAM</h4>
+                <h5 class="text-center">mail: nvl096@gmail.com</h5>
                 <hr class="my-2">
-              </div>
-              <div>
-                <label for="exampleInputNumber" class="form-label">Enter your income here</label>
-                <input type="number" class="form-control p-2" id="taxIncome" placeholder="Enter your income here" required>
+                 <div>
+                  <small class="text-body-secondary"></small>
+                  <input type="number" class="form-control p-2" id="oldTaxIncome" placeholder="Enter your income here" required><br />
+                  <input type="number" class="form-control p-2" id="newTaxIncome" placeholder="Enter your income here" required>
+                </div>
                 <br />
                 <button class="btn btn-outline-success" onclick="incomeOld() , incomeNew() ">click here</button>
-              <small class="text-body-secondary"></small>
-              <h2 class="fs-5 fw-bold mb-3">
+              
+              <p class="fs-5 fw-bold mb-3">
                 <div class="result" id="resultOld"></div>
-              </h2>
-              <h2 class="fs-5 fw-bold mb-3">
+              </p>
+              <p class="fs-5 fw-bold mb-3">
                 <div class="result" id="resultNew"></div>
-              </h2>
+              </p>
               <hr class="my-4">
+              <a href="https://www.youtube.com/channel/UCCVYrD5Pb-5C8nQ09sN-80w" target="_blank" class="text-center">subscribe my channel</a>
             </div>
           </div>
         </div>
       </div>
     </div>
+    
     <script src="script.js"></script>
   </body>
 </html>
+
+
+
